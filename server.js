@@ -26,6 +26,7 @@ app.get("/:room", (req, res) => {
 
 io.on("connection", (socket) => {
   socket.on("join-room", (roomId, userId, userName) => {
+    console.log(userName, "connected")
     socket.join(roomId);
     setTimeout(()=>{
       socket.to(roomId).broadcast.emit("user-connected", userId);
