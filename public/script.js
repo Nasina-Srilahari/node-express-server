@@ -24,7 +24,7 @@ const user = prompt("Enter your name");
 var peer = new Peer({
   host: 'https://videospeak2.onrender.com',
   port: 10000,
-  path: '/',
+  path: '/peerjs',
   config: {
     'iceServers': [
       { url: 'stun:stun01.sipphone.com' },
